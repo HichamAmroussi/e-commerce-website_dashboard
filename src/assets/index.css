@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CSS */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 285px 1fr;
+    grid-template-rows: 90px 1fr;
+}
+
+.grid-container header {
+    grid-column-start: 2;
+}
+
+.grid-container aside {
+    grid-row-start: 1;
+}
+
+.grid-container > div {
+    grid-column-start: 2;
+}
+
+/*-------------------------------- Loading Animation --------------------------------*/
+.loading-animation {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: 6.2px solid #96D2E2;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    animation: spin 0.7s infinite ease;
+  }
+  @media screen and (max-width: 500px) {
+    .loading-animation {
+      width: 55px;
+      height: 55px;
+      border: 5.5px solid #96D2E2;
+      border-top-color: transparent;
+      border-right-color: transparent;
+    }
+  }
+  
+  @keyframes spin { 
+    100% { 
+        transform: rotate(360deg); 
+    } 
+  }
