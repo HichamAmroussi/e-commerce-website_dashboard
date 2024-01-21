@@ -1,8 +1,8 @@
-import { useState } from "react";
+//import { useState } from "react";
 import { FaPencil } from "react-icons/fa6";
 import { RiDeleteBin6Line } from "react-icons/ri";
 // Interfaces
-interface Order {
+/*interface Order {
     id: number;
     first_name: string;
     last_name: string;
@@ -11,11 +11,11 @@ interface Order {
     phone_number: string;
     shipping_type: string;
     products: string;
-}
+}*/
 
 const Orders = () => {
-    const [orders, setOrders] = useState<Order[] | null>(null);
-    const [isPending, setIsPending] = useState(false);
+    //const [orders, setOrders] = useState<Order[] | null>(null);
+    //const [isPending, setIsPending] = useState(false);
 
     const ordersData = [{
         id: 1,
@@ -79,11 +79,11 @@ const Orders = () => {
                 <div className="text-gray-500 text-md font-medium">Products</div>
             </div>
 
-            {isPending && (
+            {/*isPending && (
                 <div className="min-h-full w-full flex justify-center col-span-4">
                     <div className="loading-animation"></div>
                 </div>
-            )}
+            )*/}
 
             { ordersData && ordersData.length !== 0 &&
                 ordersData.map((order) => (
