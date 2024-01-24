@@ -6,26 +6,32 @@ interface ProductProps {
         id: number;
         size: string;
         name: string;
+        description: string;
         price: number;
         category: string;
         image_thumbnail: string;
+        stock: number;
     };
     products: {
         id: number;
         size: string;
         name: string;
+        description: string;
         price: number;
         category: string;
         image_thumbnail: string;
+        stock: number;
     }[];
     setProducts: (
         item: {
             id: number;
             size: string;
             name: string;
+            description: string;
             price: number;
             category: string;
             image_thumbnail: string;
+            stock: number;
         }[]
       ) => void;
 }
@@ -50,6 +56,7 @@ const ProductCard = ({ product, products, setProducts }: ProductProps) => {
             <div className="py-6 px-1">
                 <p className="text-xl font-medium">{product.name}</p>
                 <p className="text-md py-1">{product.price} DA</p>
+                <p className="text-md py-1">Stock : {product.stock}</p>
             </div>
 
             <div className="flex gap-3 justify-end">

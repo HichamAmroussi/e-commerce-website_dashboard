@@ -10,9 +10,11 @@ interface Product {
     id: number;
     size: string;
     name: string;
+    description: string;
     price: number;
     category: string;
     image_thumbnail: string;
+    stock: number;
 }
 interface ButtonProps {
     id: number;
